@@ -2,6 +2,12 @@ import { Cpu, Monitor, Gauge, Radio, Box, Rocket, ArrowRight, CheckCircle2, Cloc
 import { Link } from "react-router-dom"
 
 export default function Services() {
+    const stats = [
+    { icon: Award, value: "15+", label: "Years Experience" },
+    { icon: Users, value: "200+", label: "Projects Delivered" },
+    { icon: CheckCircle2, value: "98%", label: "Client Satisfaction" },
+    { icon: Clock, value: "24/7", label: "Support Available" },
+  ];
   const services = [
     {
       icon: Cpu,
@@ -139,49 +145,9 @@ export default function Services() {
           </div>
         </div>
       </section>
-<section className="py-14 md:py-20 bg-dark-lighter">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    {/* Heading */}
-    <div className="text-center mb-10 md:mb-16">
-      <h2 className="text-3xl md:text-4xl font-semibold mb-3 md:mb-4 text-white">
-        Why Choose Our Services
-      </h2>
-      <p className="text-base md:text-xl text-text-muted">
-        Industry-leading automation solutions with proven results
-      </p>
-    </div>
+    
 
-    {/* Stats Grid */}
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-
-      {[
-        { icon: Award, value: "15+", label: "Years Experience" },
-        { icon: Users, value: "200+", label: "Projects Delivered" },
-        { icon: CheckCircle2, value: "98%", label: "Client Satisfaction" },
-        { icon: Clock, value: "24/7", label: "Support Available" },
-      ].map((item, idx) => (
-        <div
-          key={idx}
-          className="text-center bg-dark border border-white/10 rounded-xl py-8 px-4 hover:border-cyan/40 transition"
-        >
-          <div className="w-14 h-14 md:w-16 md:h-16 bg-cyan/10 border border-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <item.icon className="text-cyan" size={28} />
-          </div>
-
-          <h3 className="text-2xl md:text-3xl font-bold mb-1 text-white">
-            {item.value}
-          </h3>
-
-          <p className="text-sm md:text-base text-text-muted">
-            {item.label}
-          </p>
-        </div>
-      ))}
-
-    </div>
-  </div>
-</section>
 
 
       <section className="py-24 bg-dark">
