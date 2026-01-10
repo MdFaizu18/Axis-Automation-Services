@@ -85,7 +85,7 @@ export default function Services() {
 
   return (
     <div className="bg-dark">
-      <section className="relative bg-dark-lighter text-white py-32 overflow-hidden">
+      <section className="relative bg-dark-lighter text-white py-12 lg:py-20  overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&q=80')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl lg:text-7xl font-semibold tracking-tight mb-6">
@@ -139,49 +139,50 @@ export default function Services() {
           </div>
         </div>
       </section>
+<section className="py-14 md:py-20 bg-dark-lighter">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <section className="py-20 bg-dark-lighter">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-semibold mb-4 text-white">Why Choose Our Services</h2>
-            <p className="text-xl text-text-muted">Industry-leading automation solutions with proven results</p>
+    {/* Heading */}
+    <div className="text-center mb-10 md:mb-16">
+      <h2 className="text-3xl md:text-4xl font-semibold mb-3 md:mb-4 text-white">
+        Why Choose Our Services
+      </h2>
+      <p className="text-base md:text-xl text-text-muted">
+        Industry-leading automation solutions with proven results
+      </p>
+    </div>
+
+    {/* Stats Grid */}
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+      {[
+        { icon: Award, value: "15+", label: "Years Experience" },
+        { icon: Users, value: "200+", label: "Projects Delivered" },
+        { icon: CheckCircle2, value: "98%", label: "Client Satisfaction" },
+        { icon: Clock, value: "24/7", label: "Support Available" },
+      ].map((item, idx) => (
+        <div
+          key={idx}
+          className="text-center bg-dark border border-white/10 rounded-xl py-8 px-4 hover:border-cyan/40 transition"
+        >
+          <div className="w-14 h-14 md:w-16 md:h-16 bg-cyan/10 border border-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <item.icon className="text-cyan" size={28} />
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan/10 border border-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Award className="text-cyan" size={32} />
-              </div>
-              <h3 className="text-3xl font-bold mb-2 text-white">15+</h3>
-              <p className="text-text-muted">Years Experience</p>
-            </div>
+          <h3 className="text-2xl md:text-3xl font-bold mb-1 text-white">
+            {item.value}
+          </h3>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan/10 border border-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Users className="text-cyan" size={32} />
-              </div>
-              <h3 className="text-3xl font-bold mb-2 text-white">200+</h3>
-              <p className="text-text-muted">Projects Delivered</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan/10 border border-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <CheckCircle2 className="text-cyan" size={32} />
-              </div>
-              <h3 className="text-3xl font-bold mb-2 text-white">98%</h3>
-              <p className="text-text-muted">Client Satisfaction</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan/10 border border-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-cyan" size={32} />
-              </div>
-              <h3 className="text-3xl font-bold mb-2 text-white">24/7</h3>
-              <p className="text-text-muted">Support Available</p>
-            </div>
-          </div>
+          <p className="text-sm md:text-base text-text-muted">
+            {item.label}
+          </p>
         </div>
-      </section>
+      ))}
+
+    </div>
+  </div>
+</section>
+
 
       <section className="py-24 bg-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

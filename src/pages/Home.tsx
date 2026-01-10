@@ -71,7 +71,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark-lighter/95 to-dark/95"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-28">
           <div className="max-w-4xl">
             <h1 className="text-5xl lg:text-7xl font-semibold tracking-tight mb-8 leading-[1.1]">
               <span className="text-white">Industrial Automation &</span>
@@ -113,33 +113,95 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-dark-lighter">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-4">
-              <span className="text-white">Our Core </span>
-              <span className="text-cyan">Services</span>
-            </h2>
-            <p className="text-xl text-text-muted max-w-3xl mx-auto">
-              Comprehensive automation solutions tailored to your industrial needs
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="group bg-dark border-b-4 border-cyan/30 rounded-xl p-8 hover:border-cyan transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-14 h-14 bg-cyan/10 border border-cyan/30 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
-                  <service.icon className="text-cyan" size={28} />
-                </div>
-                <h3 className="text-2xl font-semibold mb-3 text-white">{service.title}</h3>
-                <p className="text-text-muted leading-relaxed">{service.description}</p>
+    <section className="relative py-16 md:py-24 bg-muted overflow-hidden">
+  {/* Background */}
+  <div className="absolute inset-0 opacity-5">
+    <div className="absolute top-10 left-10 w-56 h-56 md:w-72 md:h-72 bg-[hsl(var(--accent))] rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute bottom-20 right-20 w-72 h-72 md:w-96 md:h-96 bg-[hsl(var(--accent))] rounded-full blur-3xl animate-pulse delay-1000"></div>
+  </div>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Heading */}
+    <div className="text-center mb-12 md:mb-20">
+      <span className="inline-block px-3 py-1.5 bg-[hsl(var(--accent))]/10 border border-[hsl(var(--accent))]/30 rounded-full text-[hsl(var(--accent))] text-xs md:text-sm font-semibold uppercase tracking-wider mb-4">
+        What We Offer
+      </span>
+
+      <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold tracking-tight mb-4 md:mb-6">
+        <span className="text-foreground">Our Core </span>
+        <span className="text-[hsl(var(--accent))]">Services</span>
+      </h2>
+
+      <p className="text-sm md:text-xl text-muted-foreground max-w-3xl mx-auto">
+        Comprehensive automation solutions tailored to your industrial needs
+      </p>
+    </div>
+
+    {/* Services Grid */}
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10">
+      {services.map((service, index) => (
+        <div
+          key={service.title}
+          className={`group relative ${index === 0 || index === 5 ? "lg:translate-y-8" : ""}`}
+        >
+          {/* Gradient border (desktop focus) */}
+          <div className="hidden md:block absolute -inset-0.5 bg-gradient-to-br from-[hsl(var(--accent))] to-[hsl(var(--accent))]/30 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur"></div>
+
+          {/* Card */}
+          <div className="relative bg-card border border-border rounded-xl md:rounded-2xl p-4 md:p-8 h-full transition-all duration-300 md:group-hover:-translate-y-2 md:group-hover:shadow-2xl md:group-hover:shadow-[hsl(var(--accent))]/20">
+            {/* Icon */}
+            <div className="relative mb-4 md:mb-6">
+              <div className="relative w-10 h-10 md:w-16 md:h-16 bg-[hsl(var(--accent))]/10 border border-[hsl(var(--accent))]/30 rounded-xl md:rounded-2xl flex items-center justify-center md:group-hover:scale-110 md:group-hover:rotate-6 transition-all duration-500">
+                <service.icon
+                  className="text-[hsl(var(--accent))]"
+                  size={20}
+                //   md:size={32}
+                  strokeWidth={2}
+                />
               </div>
-            ))}
+            </div>
+
+            {/* Title */}
+            <h3 className="text-sm md:text-2xl font-semibold mb-2 md:mb-4 text-foreground md:group-hover:text-[hsl(var(--accent))] transition-colors">
+              {service.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
+              {service.description}
+            </p>
+
+            {/* Learn more (desktop only) */}
+            <Link
+              to="/services"
+              className="hidden md:inline-flex items-center mt-6 text-[hsl(var(--accent))] font-medium opacity-0 group-hover:opacity-100 transition-all duration-500"
+            >
+              Learn More
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="text-center mt-12 md:mt-16">
+      <p className="text-sm md:text-lg text-muted-foreground mb-4 md:mb-6">
+        Need a custom automation solution?
+      </p>
+      <Link
+        to="/contact"
+        className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] font-semibold rounded-lg md:rounded-xl hover:scale-105 transition-all duration-300 shadow-lg"
+      >
+        Request Custom Quote
+        <ArrowRight className="ml-2" size={18} />
+      </Link>
+    </div>
+  </div>
+</section>
+
+
+
 
       <section className="py-24 bg-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,7 +211,7 @@ export default function Home() {
               <span className="text-cyan">Us?</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
               <div key={feature.text} className="text-center group">
                 <div className="w-20 h-20 bg-cyan/10 border border-cyan/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cyan/20 transition-colors">

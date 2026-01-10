@@ -28,7 +28,7 @@ export default function Contact() {
 
   return (
     <div className="bg-dark">
-      <section className="relative bg-dark-lighter py-20 overflow-hidden">
+      <section className="relative bg-dark-lighter lg:py-20 py-12 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1920&q=80')] bg-cover bg-center opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
@@ -36,7 +36,7 @@ export default function Contact() {
               <span className="text-white">Get In </span>
               <span className="text-cyan">Touch</span>
             </h1>
-            <p className="text-xl text-text-muted leading-relaxed">
+            <p className="text-lg lg:text-xl text-text-muted leading-relaxed">
               Have a question or need assistance? We're here to help you with your industrial automation needs.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function Contact() {
                 <div className="w-12 h-12 bg-cyan/10 border border-cyan/30 rounded-lg flex items-center justify-center">
                   <MessageSquare className="text-cyan" size={24} />
                 </div>
-                <h2 className="text-3xl font-semibold text-white">Send Us a Message</h2>
+                <h2 className="text-xl lg:text-3xl font-semibold text-white">Send Us a Message</h2>
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -66,7 +66,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-dark border border-cyan/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan focus:border-transparent transition-all placeholder:text-text-muted"
-                    placeholder="John Doe"
+                    placeholder="Enter Your Full Name"
                   />
                 </div>
                 <div>
@@ -81,7 +81,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-dark border border-cyan/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan focus:border-transparent transition-all placeholder:text-text-muted"
-                    placeholder="john.doe@company.com"
+                    placeholder="Enter Your Email Address"
                   />
                 </div>
                 <div>
@@ -95,7 +95,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-dark border border-cyan/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan focus:border-transparent transition-all placeholder:text-text-muted"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="Enter Your Phone Number"
                   />
                 </div>
                 <div>
@@ -124,7 +124,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-semibold text-white mb-8">Contact Information</h2>
+              <h2 className="text-2xl lg:text-3xl font-semibold text-white mb-8">Contact Information</h2>
               <div className="space-y-6 mb-8">
                 <div className="bg-dark-lighter border border-cyan/20 rounded-xl p-6 hover:border-cyan transition-colors">
                   <div className="flex items-start gap-4">
@@ -135,9 +135,9 @@ export default function Contact() {
                       <h3 className="font-semibold text-white text-lg mb-2">Our Location</h3>
                       <p className="text-text-muted leading-relaxed">
                         123 Industrial Park, Sector 5<br />
-                        Manufacturing District
+                        Manufacturing District, Hosur
                         <br />
-                        State 12345, Country
+                        Tamil Nadu - 636001, India.
                       </p>
                     </div>
                   </div>
@@ -150,8 +150,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-white text-lg mb-2">Phone Numbers</h3>
-                      <p className="text-text-muted mb-1">+1 (555) 123-4567</p>
-                      <p className="text-text-muted">+1 (555) 987-6543</p>
+                      <p className="text-text-muted mb-1">+91 9443511343</p>
+                      {/* <p className="text-text-muted">+91 9443511343</p> */}
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-white text-lg mb-2">Email Address</h3>
                       <p className="text-text-muted mb-1">info@axisautomation.com</p>
-                      <p className="text-text-muted">sales@axisautomation.com</p>
+                      <p className="text-text-muted">axis_hsr@rediffmail.com</p>
                     </div>
                   </div>
                 </div>

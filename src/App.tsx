@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import MobileBottomNav from "./components/MobileBottomNav"
+import WhatsAppButton from "./components/WhatsAppButton"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Services from "./pages/Services"
@@ -10,7 +12,7 @@ import Contact from "./pages/Contact"
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pb-16 md:pb-0">
       <Navbar />
       <main className="flex-1">
         <Routes>
@@ -23,6 +25,8 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <MobileBottomNav />
+      <WhatsAppButton />
     </div>
   )
 }
