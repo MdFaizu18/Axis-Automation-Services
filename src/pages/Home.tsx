@@ -62,37 +62,37 @@ export default function Home() {
   ]
 
   return (
-    <div className="bg-dark">
-      <section className="relative bg-dark overflow-hidden">
+    <div className="bg-background min-h-screen">
+      <section className="relative bg-muted overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-30">
             <source src="/landing.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark-lighter/95 to-dark/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-muted/95 to-background/95"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
           <div className="max-w-4xl">
             <h1 className="text-5xl lg:text-7xl font-semibold tracking-tight mb-8 leading-[1.1]">
-              <span className="text-white">Industrial Automation &</span>
+              <span className="text-foreground">Industrial Automation &</span>
               <br />
-              <span className="text-cyan">Control Solutions</span>
+              <span className="text-[hsl(var(--accent))]">Control Solutions</span>
               <br />
-              <span className="text-white">You Can Trust</span>
+              <span className="text-foreground">You Can Trust</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-text-muted mb-10 leading-relaxed max-w-3xl">
+            <p className="text-xl lg:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-3xl">
               Experts in PLCs, HMIs, Drives, Sensors & Turnkey Automation Projects
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-cyan text-dark font-semibold rounded-lg hover:bg-cyan/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan/20"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] font-semibold rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Request a Quote
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan/50 text-white font-semibold rounded-lg hover:bg-cyan/10 backdrop-blur-sm transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-[hsl(var(--accent))]/50 text-foreground font-semibold rounded-lg hover:bg-[hsl(var(--accent))]/10 backdrop-blur-sm transition-all duration-300"
               >
                 Contact Us
               </Link>
@@ -103,24 +103,24 @@ export default function Home() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-sm border border-cyan/20 rounded-xl p-6 text-center hover:bg-cyan/10 transition-all duration-300"
+                className="bg-card/50 backdrop-blur-sm border border-[hsl(var(--accent))]/20 rounded-xl p-6 text-center hover:bg-[hsl(var(--accent))]/10 transition-all duration-300"
               >
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-sm text-text-muted uppercase tracking-wider">{stat.label}</div>
+                <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2">{stat.value}</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-dark-lighter">
+      <section className="py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-4">
-              <span className="text-white">Our Core </span>
-              <span className="text-cyan">Services</span>
+              <span className="text-foreground">Our Core </span>
+              <span className="text-[hsl(var(--accent))]">Services</span>
             </h2>
-            <p className="text-xl text-text-muted max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive automation solutions tailored to your industrial needs
             </p>
           </div>
@@ -128,52 +128,54 @@ export default function Home() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group bg-dark border-b-4 border-cyan/30 rounded-xl p-8 hover:border-cyan transition-all duration-300 hover:-translate-y-1"
+                className="group bg-card border-b-4 border-[hsl(var(--accent))]/30 rounded-xl p-8 hover:border-[hsl(var(--accent))] transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-cyan/10 border border-cyan/30 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
-                  <service.icon className="text-cyan" size={28} />
+                <div className="w-14 h-14 bg-[hsl(var(--accent))]/10 border border-[hsl(var(--accent))]/30 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[hsl(var(--accent))]/20 transition-colors">
+                  <service.icon className="text-[hsl(var(--accent))]" size={28} />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-white">{service.title}</h3>
-                <p className="text-text-muted leading-relaxed">{service.description}</p>
+                <h3 className="text-2xl font-semibold mb-3 text-foreground">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-dark">
+      <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-4">
-              <span className="text-white">Why Choose </span>
-              <span className="text-cyan">Us?</span>
+              <span className="text-foreground">Why Choose </span>
+              <span className="text-[hsl(var(--accent))]">Us?</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {features.map((feature) => (
               <div key={feature.text} className="text-center group">
-                <div className="w-20 h-20 bg-cyan/10 border border-cyan/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cyan/20 transition-colors">
-                  <feature.icon className="text-cyan" size={32} />
+                <div className="w-20 h-20 bg-[hsl(var(--accent))]/10 border border-[hsl(var(--accent))]/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[hsl(var(--accent))]/20 transition-colors">
+                  <feature.icon className="text-[hsl(var(--accent))]" size={32} />
                 </div>
-                <p className="font-medium text-white">{feature.text}</p>
+                <p className="font-medium text-foreground">{feature.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative py-24 bg-dark-lighter overflow-hidden">
+      <section className="relative py-24 bg-muted overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80')] bg-cover bg-center opacity-10"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-6">
-            <span className="text-white">Get in </span>
-            <span className="text-cyan">Touch</span>
+            <span className="text-foreground">Get in </span>
+            <span className="text-[hsl(var(--accent))]">Touch</span>
           </h2>
-          <p className="text-xl text-text-muted mb-10 leading-relaxed">Looking for Reliable Automation Solutions?</p>
-          <p className="text-lg text-text-muted mb-10">Contact us today to discuss your project requirements</p>
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+            Looking for Reliable Automation Solutions?
+          </p>
+          <p className="text-lg text-muted-foreground mb-10">Contact us today to discuss your project requirements</p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-10 py-5 bg-cyan text-dark font-bold text-lg rounded-lg hover:bg-cyan/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan/30"
+            className="inline-flex items-center justify-center px-10 py-5 bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] font-bold text-lg rounded-lg hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
           >
             Get a Quote
             <ArrowRight className="ml-2" size={22} />

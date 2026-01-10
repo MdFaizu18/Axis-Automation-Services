@@ -37,24 +37,58 @@
     --radius: 0.5rem;
   }
 
-  .dark {
-    --primary: 200 95% 42%;
-    --primary-foreground: 220 25% 10%;
-    --secondary: 195 7% 44%;
-    --secondary-foreground: 0 0% 100%;
-    --background: 220 25% 10%;
-    --foreground: 0 0% 100%;
-    --card: 220 25% 10%;
-    --card-foreground: 0 0% 100%;
-    --popover: 220 25% 10%;
-    --popover-foreground: 0 0% 100%;
-    --muted: 195 7% 44%;
-    --muted-foreground: 210 11% 45%;
-    --accent: 195 7% 44%;
+  /* Add light mode theme variables */
+  .light {
+    --primary: 210 100% 40%; /* Industrial blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 85%; /* Light steel gray */
+    --secondary-foreground: 210 50% 8%;
+
+    --background: 0 0% 98%; /* Off-white background */
+    --foreground: 210 50% 8%; /* Dark text */
+
+    --text-primary: 210 50% 8%; /* Dark for headings */
+    --text-muted: 210 15% 45%; /* Muted dark gray */
+
+    --border: 210 20% 85%; /* Light border */
+    --accent: 190 100% 45%; /* Bright cyan/blue accent */
     --accent-foreground: 0 0% 100%;
-    --border: 195 7% 44%;
-    --input: 195 7% 44%;
-    --ring: 200 95% 42%;
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 210 50% 8%;
+
+    --muted: 210 20% 95%; /* Light muted */
+    --muted-foreground: 210 15% 45%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --input: 210 20% 90%;
+    --ring: 190 100% 45%;
+  }
+
+  .dark {
+    --primary: 210 50% 8%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --background: 210 50% 8%;
+    --foreground: 0 0% 100%;
+    --card: 210 30% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 210 30% 12%;
+    --popover-foreground: 0 0% 100%;
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 190 100% 50%;
+    --accent-foreground: 210 50% 8%;
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 190 100% 50%;
   }
 }
 
@@ -70,6 +104,7 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1,
@@ -81,11 +116,13 @@
     font-weight: 600;
     letter-spacing: -0.02em;
     color: hsl(var(--text-primary));
+    transition: color 0.3s ease;
   }
 
   p {
     color: hsl(var(--text-muted));
     line-height: 1.7;
+    transition: color 0.3s ease;
   }
 
   /* Enhanced mobile typography */
