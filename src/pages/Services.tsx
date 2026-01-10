@@ -2,12 +2,7 @@ import { Cpu, Monitor, Gauge, Radio, Box, Rocket, ArrowRight, CheckCircle2, Cloc
 import { Link } from "react-router-dom"
 
 export default function Services() {
-    const stats = [
-    { icon: Award, value: "15+", label: "Years Experience" },
-    { icon: Users, value: "200+", label: "Projects Delivered" },
-    { icon: CheckCircle2, value: "98%", label: "Client Satisfaction" },
-    { icon: Clock, value: "24/7", label: "Support Available" },
-  ];
+
   const services = [
     {
       icon: Cpu,
