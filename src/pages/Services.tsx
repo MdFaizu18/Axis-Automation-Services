@@ -1,4 +1,4 @@
-import { Cpu, Monitor, Gauge, Radio, Box, Rocket, ArrowRight, CheckCircle2, Clock, Users, Award } from "lucide-react"
+import { Cpu, Monitor, Gauge, Radio, Box, Rocket, ArrowRight, CheckCircle2 } from "lucide-react"
 import { Link } from "react-router-dom"
 
 export default function Services() {
