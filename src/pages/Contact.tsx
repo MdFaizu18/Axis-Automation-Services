@@ -1,9 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState, type FormEvent } from "react"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Clock, MessageSquare, CheckCircle } from "lucide-react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -29,27 +28,33 @@ export default function Contact() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight text-text-primary mb-4">Contact Us</h1>
-          <p className="text-lg text-text-muted max-w-3xl">
-            Get in touch with us to discuss your industrial automation needs
-          </p>
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(40deg,transparent_30%,rgba(56,189,248,0.1)_50%,transparent_70%)]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6">Get In Touch</h1>
+            <p className="text-xl text-slate-300 leading-relaxed">
+              Have a question or need assistance? We're here to help you with your industrial automation needs.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <section className="py-16">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
+            <div className="bg-white rounded-2xl p-8 shadow-xl border border-slate-200">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <MessageSquare className="text-blue-600" size={24} />
+                </div>
+                <h2 className="text-3xl font-semibold text-slate-900">Send Us a Message</h2>
+              </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
-                    Name *
+                  <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+                    Full Name *
                   </label>
                   <input
                     type="text"
@@ -58,13 +63,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                    placeholder="Your name"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-2">
-                    Email *
+                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -73,13 +78,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
-                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    placeholder="john.doe@company.com"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-text-primary mb-2">
-                    Phone
+                  <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
+                    Phone Number
                   </label>
                   <input
                     type="tel"
@@ -87,12 +92,12 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-text-primary mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
                     Message *
                   </label>
                   <textarea
@@ -102,13 +107,13 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary resize-none"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none transition-all"
                     placeholder="Tell us about your automation requirements..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-secondary transition-colors flex items-center justify-center gap-2"
+                  className="w-full px-6 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-[1.02]"
                 >
                   <Send size={18} />
                   Send Message
@@ -116,68 +121,86 @@ export default function Contact() {
               </form>
             </div>
 
-            {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
+              <h2 className="text-3xl font-semibold text-slate-900 mb-8">Contact Information</h2>
               <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-text-primary mb-1">Address</h3>
-                    <p className="text-text-muted">
-                      123 Industrial Park, Sector 5<br />
-                      Manufacturing District
-                      <br />
-                      State 12345, Country
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-text-primary mb-1">Phone</h3>
-                    <p className="text-text-muted">+1 (555) 123-4567</p>
-                    <p className="text-text-muted">+1 (555) 987-6543</p>
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-xl transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin className="text-blue-600" size={28} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-slate-900 text-lg mb-2">Our Location</h3>
+                      <p className="text-slate-600 leading-relaxed">
+                        123 Industrial Park, Sector 5<br />
+                        Manufacturing District
+                        <br />
+                        State 12345, Country
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="text-primary" size={24} />
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-xl transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Phone className="text-blue-600" size={28} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-slate-900 text-lg mb-2">Phone Numbers</h3>
+                      <p className="text-slate-600 mb-1">+1 (555) 123-4567</p>
+                      <p className="text-slate-600">+1 (555) 987-6543</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-text-primary mb-1">Email</h3>
-                    <p className="text-text-muted">info@automationtech.com</p>
-                    <p className="text-text-muted">sales@automationtech.com</p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 hover:shadow-xl transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Mail className="text-blue-600" size={28} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-slate-900 text-lg mb-2">Email Address</h3>
+                      <p className="text-slate-600 mb-1">info@axisautomation.com</p>
+                      <p className="text-slate-600">sales@axisautomation.com</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-muted rounded-lg overflow-hidden border border-border">
-                <div className="aspect-video bg-gradient-to-br from-blue-50 to-slate-100 flex items-center justify-center">
-                  <img src="/industrial-area-map.jpg" alt="Location Map" className="w-full h-full object-cover" />
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-200 mb-6">
+                <div className="aspect-video">
+                  <img
+                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
+                    alt="Location Map"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
-              {/* Business Hours */}
-              <div className="mt-6 bg-card border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-text-primary mb-4">Business Hours</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">Monday - Friday</span>
-                    <span className="text-text-primary font-medium">9:00 AM - 6:00 PM</span>
+              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-6 shadow-xl text-white">
+                <div className="flex items-center gap-3 mb-4">
+                  <Clock size={24} />
+                  <h3 className="font-semibold text-xl">Business Hours</h3>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center pb-3 border-b border-white/20">
+                    <span className="text-blue-100">Monday - Friday</span>
+                    <span className="font-semibold flex items-center gap-2">
+                      <CheckCircle size={16} />
+                      9:00 AM - 6:00 PM
+                    </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">Saturday</span>
-                    <span className="text-text-primary font-medium">9:00 AM - 2:00 PM</span>
+                  <div className="flex justify-between items-center pb-3 border-b border-white/20">
+                    <span className="text-blue-100">Saturday</span>
+                    <span className="font-semibold flex items-center gap-2">
+                      <CheckCircle size={16} />
+                      9:00 AM - 2:00 PM
+                    </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-text-muted">Sunday</span>
-                    <span className="text-text-primary font-medium">Closed</span>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-100">Sunday</span>
+                    <span className="font-semibold">Closed</span>
                   </div>
                 </div>
               </div>

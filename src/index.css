@@ -2,47 +2,59 @@
 
 @layer base {
   :root {
-    /* B2B Industrial Automation Color System */
-    --primary: 221 83% 33%;
-    --primary-foreground: 0 0% 100%;
+    /* Premium B2B Industrial Design System - Dark sophisticated palette */
+    --primary: 210 100% 12%; /* Deep navy - #001E3C */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 215 25% 27%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 195 7% 44%; /* Industrial steel gray - #6B7B88 */
+    --secondary-foreground: 0 0% 100%; /* White */
 
-    --background: 0 0% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 220 25% 10%; /* Almost black - #131920 */
 
-    --text-primary: 222 47% 11%;
-    --text-muted: 215 16% 47%;
+    --text-primary: 220 25% 10%; /* Deep charcoal */
+    --text-muted: 210 11% 45%; /* Steel gray - #67737E */
 
-    --border: 214 32% 91%;
-    --accent: 215 19% 35%;
+    --border: 210 20% 92%; /* Light border - #E7EBF0 */
+    --accent: 200 95% 42%; /* Vibrant cyan accent - #0396D6 */
+    --accent-foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 0 0% 100%; /* Pure white */
+    --card-foreground: 220 25% 10%;
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 30% 97%; /* Off-white - #F7F9FB */
+    --muted-foreground: 210 11% 45%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 220 25% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --input: 210 20% 92%;
+    --ring: 200 95% 42%;
 
-    --radius: 0.375rem;
+    --radius: 0.5rem; /* 8px - slightly more rounded */
   }
 
   .dark {
-    --background: 222 47% 11%;
+    --primary: 200 95% 42%;
+    --primary-foreground: 220 25% 10%;
+    --secondary: 195 7% 44%;
+    --secondary-foreground: 0 0% 100%;
+    --background: 220 25% 10%;
     --foreground: 0 0% 100%;
-    --card: 222 47% 11%;
+    --card: 220 25% 10%;
     --card-foreground: 0 0% 100%;
-    --border: 215 25% 27%;
-    --input: 215 25% 27%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 0 0% 100%;
+    --muted: 195 7% 44%;
+    --muted-foreground: 210 11% 45%;
+    --accent: 195 7% 44%;
+    --accent-foreground: 0 0% 100%;
+    --border: 195 7% 44%;
+    --input: 195 7% 44%;
+    --ring: 200 95% 42%;
   }
 }
 
