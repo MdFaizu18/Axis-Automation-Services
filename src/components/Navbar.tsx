@@ -4,7 +4,9 @@
 import { Link, useLocation } from "react-router-dom"
 
 export default function Navbar() {
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   const location = useLocation()
 
   const navLinks = [
