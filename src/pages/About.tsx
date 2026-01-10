@@ -4,17 +4,17 @@ import { Link } from "react-router-dom"
 export default function About() {
   return (
     <div className="bg-dark">
-      <section className="relative bg-dark-lighter text-white py-32 overflow-hidden">
+      <section className="relative bg-dark-lighter text-white py-12 md:py-4 lg:py-20  overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1920&q=80')] bg-cover bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
               <span className="text-white">About </span>
-              <span className="text-cyan">AXIS</span>
+              <span className="text-white">us</span>
             </h1>
-            <p className="text-xl text-slate-300 leading-relaxed">
-              Delivering excellence in industrial automation and control solutions since 2008
+            <p className=" text-lg md:text-lg lg:text-xl  text-slate-300 leading-relaxed">
+              Delivering excellence in industrial automation services and control over the solutions since 2008
             </p>
           </div>
         </div>
@@ -50,34 +50,98 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-dark-lighter">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       <section className="py-24 bg-muted relative overflow-hidden">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[hsl(var(--accent))]/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[hsl(var(--accent))]/20 rounded-full blur-3xl animate-pulse delay-700" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-semibold tracking-tight mb-4 text-white">Our Mission & Vision</h2>
-            <p className="text-xl text-text-muted max-w-3xl mx-auto">
+            <h2 className="text-4xl font-semibold tracking-tight mb-4 text-foreground">Our Mission & Vision</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Guided by our commitment to excellence and innovation
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-dark border border-cyan/30 rounded-2xl p-10 relative overflow-hidden group hover:border-cyan transition-colors">
-              <div className="w-16 h-16 bg-cyan/10 border border-cyan/30 rounded-xl flex items-center justify-center mb-6">
-                <Target className="text-cyan" size={32} />
+            {/* Mission Card */}
+            <div className="group relative">
+              {/* Animated gradient border effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[hsl(var(--accent))] to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+
+              <div className="relative bg-card border border-[hsl(var(--accent))]/30 rounded-2xl p-10 overflow-hidden hover:border-[hsl(var(--accent))] transition-all duration-300">
+                {/* Decorative corner pattern */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[hsl(var(--accent))]/10 to-transparent rounded-bl-full" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[hsl(var(--accent))]/10 to-transparent rounded-tr-full" />
+
+                {/* Icon with animated ring */}
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 w-16 h-16 bg-[hsl(var(--accent))]/20 rounded-xl blur-md group-hover:blur-lg transition-all" />
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-[hsl(var(--accent))]/20 to-[hsl(var(--accent))]/5 border border-[hsl(var(--accent))]/40 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Target
+                      className="text-[hsl(var(--accent))] group-hover:rotate-12 transition-transform duration-300"
+                      size={32}
+                    />
+                  </div>
+                </div>
+
+                <h3 className="text-3xl font-semibold mb-4 text-foreground relative">
+                  Our Mission
+                  {/* Animated underline */}
+                  <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[hsl(var(--accent))] to-transparent group-hover:w-full transition-all duration-500" />
+                </h3>
+
+                <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
+                  To empower industries with cutting-edge automation solutions that enhance productivity, ensure
+                  reliability, and foster sustainable growth through innovation and excellence.
+                </p>
+
+                {/* Number badge */}
+                <div className="absolute top-8 right-8 w-8 h-8 rounded-full bg-[hsl(var(--accent))]/10 border border-[hsl(var(--accent))]/30 flex items-center justify-center text-[hsl(var(--accent))] font-bold text-sm">
+                  01
+                </div>
               </div>
-              <h3 className="text-3xl font-semibold mb-4 text-white">Our Mission</h3>
-              <p className="text-lg text-text-muted leading-relaxed">
-                To empower industries with cutting-edge automation solutions that enhance productivity, ensure
-                reliability, and foster sustainable growth through innovation and excellence.
-              </p>
             </div>
-            <div className="bg-dark border border-cyan/30 rounded-2xl p-10 hover:border-cyan transition-colors group">
-              <div className="w-16 h-16 bg-cyan/10 border border-cyan/30 rounded-xl flex items-center justify-center mb-6">
-                <Eye className="text-cyan" size={32} />
+
+            {/* Vision Card */}
+            <div className="group relative">
+              {/* Animated gradient border effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-[hsl(var(--accent))] rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-sm" />
+
+              <div className="relative bg-card border border-[hsl(var(--accent))]/30 rounded-2xl p-10 overflow-hidden hover:border-[hsl(var(--accent))] transition-all duration-300">
+                {/* Decorative corner pattern */}
+                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-bl from-[hsl(var(--accent))]/10 to-transparent rounded-br-full" />
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-[hsl(var(--accent))]/10 to-transparent rounded-tl-full" />
+
+                {/* Icon with animated ring */}
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 w-16 h-16 bg-[hsl(var(--accent))]/20 rounded-xl blur-md group-hover:blur-lg transition-all" />
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-[hsl(var(--accent))]/20 to-[hsl(var(--accent))]/5 border border-[hsl(var(--accent))]/40 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Eye
+                      className="text-[hsl(var(--accent))] group-hover:-rotate-12 transition-transform duration-300"
+                      size={32}
+                    />
+                  </div>
+                </div>
+
+                <h3 className="text-3xl font-semibold mb-4 text-foreground relative">
+                  Our Vision
+                  {/* Animated underline */}
+                  <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[hsl(var(--accent))] to-transparent group-hover:w-full transition-all duration-500" />
+                </h3>
+
+                <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
+                  To be the most trusted partner in industrial automation, recognized for our technical expertise,
+                  customer-centric approach, and commitment.
+                </p>
+
+                {/* Number badge */}
+                <div className="absolute top-8 right-8 w-8 h-8 rounded-full bg-[hsl(var(--accent))]/10 border border-[hsl(var(--accent))]/30 flex items-center justify-center text-[hsl(var(--accent))] font-bold text-sm">
+                  02
+                </div>
               </div>
-              <h3 className="text-3xl font-semibold mb-4 text-white">Our Vision</h3>
-              <p className="text-lg text-text-muted leading-relaxed">
-                To be the most trusted partner in industrial automation, recognized for our technical expertise,
-                customer-centric approach, and commitment to delivering world-class automation solutions.
-              </p>
             </div>
           </div>
         </div>

@@ -68,7 +68,7 @@ export default function Industries() {
 
   return (
     <div className="bg-dark">
-      <section className="relative bg-dark-lighter py-20 overflow-hidden">
+      <section className="relative bg-dark-lighter py-12 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1920&q=80')] bg-cover bg-center opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
@@ -76,7 +76,7 @@ export default function Industries() {
               <span className="text-white">Industries We </span>
               <span className="text-cyan">Serve</span>
             </h1>
-            <p className="text-xl text-text-muted leading-relaxed">
+            <p className="text-lg md:text-lg text-text-muted leading-relaxed">
               Delivering specialized automation solutions across diverse industrial sectors with proven expertise and
               commitment to excellence.
             </p>
@@ -93,7 +93,7 @@ export default function Industries() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {industries.map((industry) => (
               <div
                 key={industry.title}
@@ -111,10 +111,10 @@ export default function Industries() {
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan/10 border border-cyan/30 rounded-xl mb-4 group-hover:bg-cyan/20 transition-colors">
                     <industry.icon className="text-cyan" size={24} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan transition-colors">
+                  <h3 className="text-lg  lg:text-xl font-semibold mb-3 text-white group-hover:text-cyan transition-colors">
                     {industry.title}
                   </h3>
-                  <p className="text-text-muted text-sm leading-relaxed">{industry.description}</p>
+                  <p className="text-text-muted text-hidden lg:text-sm leading-relaxed">{industry.description}</p>
                 </div>
               </div>
             ))}

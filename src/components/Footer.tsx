@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react"
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const year = new Date().getFullYear()
 
   const services = [
     "PLC Automation",
@@ -13,8 +13,8 @@ export default function Footer() {
     "Turnkey Projects",
   ]
 
-  const quickLinks = [
-    { name: "About Us", href: "/about" },
+  const links = [
+    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Industries", href: "/industries" },
     { name: "Projects", href: "/projects" },
@@ -22,121 +22,101 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-[#0A1628] text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0A1628] to-[#00D4FF]/5 opacity-50"></div>
+    <footer className="relative bg-[#0A1628] text-white">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] to-[#00D4FF]/5 opacity-60" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        {/* 🔹 GRID FIX */}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* BRAND */}
+          <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-[#00D4FF]/20 backdrop-blur-sm rounded-lg flex items-center justify-center border border-[#00D4FF]/30">
-                <span className="text-[#00D4FF] font-bold text-xl">A</span>
+              <div className="w-9 h-9 bg-[#00D4FF]/20 border border-[#00D4FF]/30 rounded-lg flex items-center justify-center">
+                <span className="text-[#00D4FF] font-bold text-lg">A</span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-white tracking-tight leading-none">
+              <div>
+                <p className="text-lg font-bold leading-none">
                   AXIS<span className="text-[#00D4FF]">.</span>
-                </span>
-                <span className="text-xs text-[#9BA5B3] tracking-wider uppercase leading-none">
+                </p>
+                <p className="text-xs mt-1  text-[#9BA5B3] uppercase tracking-wider">
                   Automation & Services
-                </span>
+                </p>
               </div>
             </div>
+
             <p className="text-sm text-[#9BA5B3] leading-relaxed mb-4">
-              Your trusted partner for industrial automation and control solutions. Delivering excellence in PLC
-              programming, HMI design, and turnkey automation projects.
+              Industrial automation and control solutions.
             </p>
-            <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-9 h-9 bg-[#1F2832] hover:bg-[#00D4FF]/20 hover:border-[#00D4FF] border border-[#29323D] rounded-lg flex items-center justify-center transition-all"
-              >
-                <Linkedin size={18} className="text-[#9BA5B3] hover:text-[#00D4FF]" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 bg-[#1F2832] hover:bg-[#00D4FF]/20 hover:border-[#00D4FF] border border-[#29323D] rounded-lg flex items-center justify-center transition-all"
-              >
-                <Twitter size={18} className="text-[#9BA5B3] hover:text-[#00D4FF]" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 bg-[#1F2832] hover:bg-[#00D4FF]/20 hover:border-[#00D4FF] border border-[#29323D] rounded-lg flex items-center justify-center transition-all"
-              >
-                <Facebook size={18} className="text-[#9BA5B3] hover:text-[#00D4FF]" />
-              </a>
-            </div>
+
+            {/* <div className="flex gap-3">
+              {[Linkedin, Twitter, Facebook].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-8 h-8 bg-[#1F2832] border border-[#29323D] rounded-lg flex items-center justify-center hover:border-[#00D4FF] hover:bg-[#00D4FF]/20 transition"
+                >
+                  <Icon size={16} className="text-[#9BA5B3] hover:text-[#00D4FF]" />
+                </a>
+              ))}
+            </div> */}
           </div>
 
+          {/* LINKS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
-            <ul className="space-y-2.5">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
+            <h4 className="text-sm font-semibold mb-3">Quick Links</h4>
+            <ul className="space-y-2">
+              {links.map((l) => (
+                <li key={l.name}>
                   <Link
-                    to={link.href}
-                    className="text-sm text-[#9BA5B3] hover:text-[#00D4FF] transition-colors inline-flex items-center group"
+                    to={l.href}
+                    className="text-sm text-[#9BA5B3] hover:text-[#00D4FF] transition"
                   >
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#00D4FF] transition-all mr-0 group-hover:mr-2"></span>
-                    {link.name}
+                    {l.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* SERVICES */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Our Services</h3>
-            <ul className="space-y-2.5">
-              {services.map((service) => (
-                <li key={service} className="text-sm text-[#9BA5B3] flex items-center">
-                  <span className="w-1.5 h-1.5 bg-[#00D4FF] rounded-full mr-2"></span>
-                  {service}
+            <h4 className="text-sm font-semibold mb-3">Services</h4>
+            <ul className="space-y-2">
+              {services.map((s) => (
+                <li key={s} className="text-sm text-[#9BA5B3]">
+                  {s}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <div className="w-9 h-9 bg-[#1F2832] border border-[#29323D] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin size={18} className="text-[#00D4FF]" />
-                </div>
-                <span className="text-sm text-[#9BA5B3] pt-1.5">
-                  123 Industrial Park, Sector 5<br />
-                  Manufacturing District, State 12345
-                </span>
+          {/* CONTACT */}
+          <div className="col-span-2 md:col-span-1">
+            <h4 className="text-sm font-semibold mb-3">Contact</h4>
+            <ul className="space-y-3">
+              <li className="flex gap-2 text-sm text-[#9BA5B3]">
+                <MapPin size={16} className="text-[#00D4FF]" />
+                Industrial Park, Sector-5
               </li>
-              <li className="flex items-center gap-3">
-                <div className="w-9 h-9 bg-[#1F2832] border border-[#29323D] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone size={18} className="text-[#00D4FF]" />
-                </div>
-                <span className="text-sm text-[#9BA5B3]">+1 (555) 123-4567</span>
+              <li className="flex gap-2 text-sm text-[#9BA5B3]">
+                <Phone size={16} className="text-[#00D4FF]" />
+                +91 9443511343
               </li>
-              <li className="flex items-center gap-3">
-                <div className="w-9 h-9 bg-[#1F2832] border border-[#29323D] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail size={18} className="text-[#00D4FF]" />
-                </div>
-                <span className="text-sm text-[#9BA5B3]">info@axisautomation.com</span>
+              <li className="flex gap-2 text-sm text-[#9BA5B3]">
+                <Mail size={16} className="text-[#00D4FF]" />
+                axis_hsr@rediffmail.com
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-[#29323D]">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-[#9BA5B3]">
-              &copy; {currentYear} AXIS Automation & Services. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm text-[#9BA5B3]">
-              <a href="#" className="hover:text-[#00D4FF] transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-[#00D4FF] transition-colors">
-                Terms of Service
-              </a>
-            </div>
+        {/* BOTTOM BAR */}
+        <div className="mt-10 pt-6 border-t border-[#29323D] text-xs text-[#9BA5B3] flex flex-col sm:flex-row justify-between gap-3">
+          <p>© {year} Axis Automation & Services</p>
+          <div className="flex gap-4">
+            <a href="#" className="hover:text-[#00D4FF]">Privacy</a>
+            <a href="#" className="hover:text-[#00D4FF]">Terms</a>
           </div>
         </div>
       </div>
