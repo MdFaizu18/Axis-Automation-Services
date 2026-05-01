@@ -1,4 +1,4 @@
-import { Target, Eye, Award, Users, Lightbulb, Heart, ArrowRight } from "lucide-react"
+import {  Eye, Award, Users, Lightbulb, Heart, ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
 
 export default function About() {
@@ -14,7 +14,7 @@ export default function About() {
               <span className="text-white">us</span>
             </h1>
             <p className=" text-lg md:text-lg lg:text-xl  text-slate-300 leading-relaxed">
-              Delivering excellence in industrial automation services and control over the solutions since 2008
+              Delivering excellence in industrial automation services and control solutions since 2001.
             </p>
           </div>
         </div>
@@ -25,16 +25,21 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-semibold tracking-tight mb-6 text-white">
-                Building the Future of Industrial Automation
+                About Axis Automation & Services
               </h2>
+
               <p className="text-lg text-text-muted leading-relaxed mb-6">
-                AXIS Automation & Services is a dedicated industrial automation company providing reliable, efficient,
-                and customized automation solutions for a wide range of industrial applications.
+                Axis Automation & Services is a specialized industrial automation company focused on delivering
+                innovative and efficient automation solutions for industrial and manufacturing sectors.
+                Our goal is to help industries enhance productivity, improve operational efficiency,
+                and achieve reliable system performance through advanced automation technologies.
               </p>
+
               <p className="text-lg text-text-muted leading-relaxed">
-                Our expertise spans PLC automation, HMI systems, AC and servo drives, industrial sensors, PLC control
-                panels, and complete turnkey projects. With a focus on quality and customer satisfaction, we deliver
-                solutions that drive operational excellence.
+                We provide a wide range of automation services including PLC programming, HMI and SCADA development,
+                AC and servo drive integration, industrial sensor solutions, control panel design, and turnkey
+                automation projects. Our team works closely with clients to understand their requirements and
+                develop automation systems that are practical, scalable, and cost-effective.
               </p>
             </div>
             <div className="relative">
@@ -69,19 +74,19 @@ export default function About() {
             {/* Mission Card */}
             <div className="group relative">
               {/* Animated gradient border effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-[hsl(var(--accent))] to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-[hsl(var(--accent))] rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-sm" />
 
               <div className="relative bg-card border border-[hsl(var(--accent))]/30 rounded-2xl p-10 overflow-hidden hover:border-[hsl(var(--accent))] transition-all duration-300">
                 {/* Decorative corner pattern */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[hsl(var(--accent))]/10 to-transparent rounded-bl-full" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[hsl(var(--accent))]/10 to-transparent rounded-tr-full" />
+                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-bl from-[hsl(var(--accent))]/10 to-transparent rounded-br-full" />
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-[hsl(var(--accent))]/10 to-transparent rounded-tl-full" />
 
                 {/* Icon with animated ring */}
                 <div className="relative mb-6">
                   <div className="absolute inset-0 w-16 h-16 bg-[hsl(var(--accent))]/20 rounded-xl blur-md group-hover:blur-lg transition-all" />
                   <div className="relative w-16 h-16 bg-gradient-to-br from-[hsl(var(--accent))]/20 to-[hsl(var(--accent))]/5 border border-[hsl(var(--accent))]/40 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Target
-                      className="text-[hsl(var(--accent))] group-hover:rotate-12 transition-transform duration-300"
+                    <Eye
+                      className="text-[hsl(var(--accent))] group-hover:-rotate-12 transition-transform duration-300"
                       size={32}
                     />
                   </div>
@@ -94,8 +99,7 @@ export default function About() {
                 </h3>
 
                 <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
-                  To empower industries with cutting-edge automation solutions that enhance productivity, ensure
-                  reliability, and foster sustainable growth through innovation and excellence.
+                  To deliver reliable and efficient industrial automation solutions that help businesses improve productivity, reduce operational downtime, and achieve long-term operational excellence.
                 </p>
 
                 {/* Number badge */}
@@ -133,8 +137,8 @@ export default function About() {
                 </h3>
 
                 <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
-                  To be the most trusted partner in industrial automation, recognized for our technical expertise,
-                  customer-centric approach, and commitment.
+                  To become a trusted automation solutions partner for industries by delivering
+                  innovative, scalable, and high-quality automation systems.
                 </p>
 
                 {/* Number badge */}
@@ -197,13 +201,15 @@ export default function About() {
                 <h2 className="text-3xl font-semibold text-white">Our Approach</h2>
               </div>
               <p className="text-lg text-text-muted leading-relaxed mb-6">
-                We believe in understanding customer requirements in depth and delivering practical, scalable, and
-                cost-effective automation solutions.
+                At Axis Automation & Services, we follow a structured approach to deliver successful
+                automation projects. We begin by understanding customer requirements and designing
+                customized automation solutions tailored to specific industrial needs.
               </p>
+
               <p className="text-lg text-text-muted leading-relaxed">
-                Our team works closely with clients throughout the project lifecycle, from initial consultation and
-                design to implementation, testing, and ongoing support. We ensure seamless integration with existing
-                systems while maintaining the highest standards of quality and safety.
+                Our team then implements reliable automation technologies, performs system testing
+                and commissioning, and provides ongoing technical support to ensure smooth and
+                efficient operations for our clients.
               </p>
             </div>
             <div className="bg-dark border border-cyan/20 rounded-2xl p-10 hover:border-cyan transition-colors">
@@ -215,18 +221,17 @@ export default function About() {
               </div>
               <ul className="space-y-3">
                 {[
-                  "PLC programming and integration",
-                  "HMI design and visualization",
-                  "AC & servo drives configuration",
-                  "Industrial sensor selection",
-                  "Control panel design",
-                  "Turnkey project execution",
-                  "System upgrades",
-                  "Technical training",
+                  "Understanding customer requirements",
+                  "Designing customized automation solutions",
+                  "Implementing reliable automation technologies",
+                  "Testing and commissioning systems",
+                  "Providing ongoing technical support",
+                  "Continuous system optimization and improvement",
+                  "Ensuring seamless integration with existing systems",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-cyan flex-shrink-0" />
-                    <span className="text-text-muted font-medium">{item}</span>
+                    <span className="text-text-muted font-small leading-relaxed text-gray-300">{item}</span>
                   </li>
                 ))}
               </ul>

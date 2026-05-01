@@ -12,14 +12,41 @@ export default function Contact() {
     message: "",
   })
 
-  const handleSubmit = (e: FormEvent) => {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwSmwQk9s7kwjCMJh5BjGEiAvVdEwYVe0oVD2f1wzdUTQrc2vdK1NRWe9AdtOVysXc/exec"
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! We will get back to you soon.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
+
+    const formDataToSend = new FormData()
+
+    formDataToSend.append("name", formData.name)
+    formDataToSend.append("email", formData.email)
+    formDataToSend.append("phone", formData.phone)
+    formDataToSend.append("message", formData.message)
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: formDataToSend,
+      })
+
+      alert("Message sent successfully!")
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      })
+    } catch (error) {
+      console.error(error)
+      alert("Something went wrong. Please try again.")
+    }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,

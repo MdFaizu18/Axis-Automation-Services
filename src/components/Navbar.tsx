@@ -31,11 +31,11 @@ export default function Navbar() {
               </div> */}
               <div className="flex flex-col">
                 <span className="text-lg md:text-xl font-bold text-white tracking-tight leading-none">
-                  AXIS<span className="text-[#00D4FF]">.</span>
+                  AXIS<span className="text-[#00D4FF]"> Automation & Services</span>
                 </span>
-                <span className="text-[10px] mt-1 md:text-xs text-[#9BA5B3] tracking-wider uppercase leading-none">
+                {/* <span className="text-[10px] mt-1 md:text-xs text-[#9BA5B3] tracking-wider uppercase leading-none">
                   Automation & Services
-                </span>
+                </span> */}
               </div>
             </div>
           </Link>

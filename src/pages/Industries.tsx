@@ -20,14 +20,14 @@ export default function Industries() {
       icon: Factory,
       title: "Manufacturing",
       description:
-        "Automation solutions for discrete and process manufacturing operations to improve efficiency and reduce downtime.",
+        "Manufacturing industries require efficient automation systems to increase productivity and reduce operational downtime. We provide PLC automation, motor control solutions, and sensor integration to help manufacturers improve production efficiency and system reliability.",
       image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80",
     },
     {
       icon: Car,
       title: "Automotive",
       description:
-        "Advanced automation systems for automotive assembly lines, welding, painting, and quality control processes.",
+        "Automation plays a critical role in automotive manufacturing processes such as assembly lines, robotic systems, and quality inspection. Our automation solutions help automotive companies achieve precision, consistency, and higher production output.",
       image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
     },
     {
@@ -41,14 +41,14 @@ export default function Industries() {
       icon: Utensils,
       title: "Food & Beverage",
       description:
-        "Hygienic automation solutions compliant with food safety standards for processing, packaging, and distribution.",
+        "Automation systems help food and beverage manufacturers improve production efficiency while maintaining product quality and safety standards. Our solutions support automated packaging, process monitoring, and production control.",
       image: "https://images.unsplash.com/photo-1581092160562-cbe660dbde88?w=800&q=80",
     },
     {
       icon: Pill,
       title: "Pharmaceutical",
       description:
-        "GMP-compliant automation systems for pharmaceutical manufacturing, ensuring quality, traceability, and compliance.",
+        "Pharmaceutical industries require precise control and monitoring systems to ensure product quality and regulatory compliance. We provide automation solutions for process control, monitoring systems, and production line optimization.",
       image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80",
     },
     {

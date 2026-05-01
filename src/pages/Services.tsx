@@ -1,5 +1,12 @@
 import { Cpu, Monitor, Gauge, Radio, Box, Rocket, ArrowRight, CheckCircle2 } from "lucide-react"
 import { Link } from "react-router-dom"
+import HMI from "../assets/images/HMI.jpeg"
+import ControlPanel from "../assets/images/ControlPanel.jpeg"
+import Sensors from "../assets/images/Sensors.jpeg"
+import Servo from "../assets/images/Servo.jpeg"
+import PLC from "../assets/images/PLC1.jpeg"
+import Turnkey from "../assets/images/Turnkey.jpeg"
+
 
 export default function Services() {
 
@@ -8,7 +15,7 @@ export default function Services() {
       icon: Cpu,
       title: "PLC Automation",
       description: "Comprehensive programmable logic controller solutions for industrial automation.",
-      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop&q=80",
+      image: PLC,
       scope: [
         "PLC programming and configuration",
         "Machine & process automation",
@@ -21,7 +28,7 @@ export default function Services() {
       icon: Monitor,
       title: "HMI Solutions",
       description: "Human-Machine Interface design for intuitive process control and monitoring.",
-      image: "https://images.unsplash.com/photo-1593642532454-e138e28a63f4?w=800&h=600&fit=crop&q=80",
+      image: HMI,
       scope: [
         "Custom HMI screen design",
         "Alarms & events management",
@@ -34,7 +41,7 @@ export default function Services() {
       icon: Gauge,
       title: "AC & Servo Drives",
       description: "Variable frequency drives and servo systems for precise motion control.",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80",
+      image: Servo,
       scope: [
         "VFD selection & commissioning",
         "Servo system configuration",
@@ -47,7 +54,7 @@ export default function Services() {
       icon: Radio,
       title: "Industrial Sensors",
       description: "Sensor integration and calibration for accurate industrial measurements.",
-      image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop&q=80",
+      image: Sensors,
       scope: [
         "Proximity & photoelectric sensors",
         "Temperature, pressure & level sensors",
@@ -60,7 +67,7 @@ export default function Services() {
       icon: Box,
       title: "PLC Control Panels",
       description: "Complete control panel design, fabrication, and commissioning services.",
-      image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop&q=80",
+      image: ControlPanel,
       scope: [
         "Electrical panel design",
         "Component selection and sourcing",
@@ -73,7 +80,7 @@ export default function Services() {
       icon: Rocket,
       title: "Turnkey Projects",
       description: "End-to-end automation project execution from concept to completion.",
-      image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&h=600&fit=crop&q=80",
+      image: Turnkey,
       scope: [
         "Requirement analysis & feasibility study",
         "System design & engineering",

@@ -12,6 +12,7 @@ import {
   Shield,
   TrendingUp,
 } from "lucide-react"
+import video from "../assets/video/landing.mp4"
 
 export default function Home() {
   const services = [
@@ -57,7 +58,7 @@ export default function Home() {
   const stats = [
     { value: "500+", label: "Projects Completed" },
     { value: "250+", label: "Happy Clients" },
-    { value: "15+", label: "Years Experience" },
+    { value: "25+", label: "Years Experience" },
     { value: "98%", label: "Client Satisfaction" },
   ]
 
@@ -66,7 +67,7 @@ export default function Home() {
       <section className="relative bg-dark overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-30">
-            <source src="/landing.mp4" type="video/mp4" />
+            <source src={video} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark-lighter/95 to-dark/95"></div>
         </div>
@@ -86,13 +87,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-cyan text-dark font-semibold rounded-lg hover:bg-cyan/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan/20"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/5 text-dark font-semibold rounded-lg bg-white/90  text-black transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan/20"
               >
                 Request a Quote
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan/50 text-white font-semibold rounded-lg hover:bg-cyan/10 backdrop-blur-sm transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/8 text-white font-semibold rounded-lg hover:bg-cyan/10 backdrop-blur-sm transition-all duration-300"
               >
                 Contact Us
               </Link>
