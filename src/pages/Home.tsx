@@ -12,7 +12,8 @@ import {
   Shield,
   TrendingUp,
 } from "lucide-react"
-import video from "../assets/video/landing.mp4"
+
+const landingVideoPath = "/assets/video/landing.mp4"
 
 export default function Home() {
   const services = [
@@ -67,7 +68,7 @@ export default function Home() {
       <section className="relative bg-dark overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-30">
-            <source src={video} type="video/mp4" />
+            <source src={landingVideoPath} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-br from-dark/95 via-dark-lighter/95 to-dark/95"></div>
         </div>
